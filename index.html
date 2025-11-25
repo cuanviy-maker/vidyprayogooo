@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vidy Prayogo — Resume</title>
+  <meta name="description" content="Resume web Vidy Prayogo — About, Skills, Portfolio, Contact" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home">Vidy Prayogo</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero container reveal" aria-labelledby="home-heading">
+      <div class="hero-inner">
+        <img id="profile-pic" src="vidy.jpeg" alt="Foto Vidy Prayogo" />
+        <div class="hero-text">
+          <h1 id="home-heading">Vidy Prayogo</h1>
+          <p class="role">Frontend Developer & UI Enthusiast</p>
+          <p class="lead">Membangun antarmuka web modern, elegan, dan dapat diakses.</p>
+          <a href="#portfolio" class="btn primary">Lihat Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container reveal" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Nama: Vidy Prayogo</p>
+          <p>Posisi: Frontend Developer</p>
+          <p>Pendidikan: Universitas Kuningan (UNIKMA) — Informatika</p>
+          <p>Saya fokus pada pembuatan UI yang bersih, aksesibel, dan performa-aware.</p>
+        </div>
+        <div class="about-history">
+          <h3>Riwayat Pendidikan</h3>
+          <ul>
+            <li>UNIKMA — S1 Informatika</li>
+            <li>Pelatihan: Frontend Modern & Accessibility</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills container reveal" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill" data-percent="90">
+          <div class="skill-head">
+            <span>HTML & Semantics</span><span class="percent">90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="skill" data-percent="85">
+          <div class="skill-head">
+            <span>CSS (Responsive, Animations)</span><span class="percent">85%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="skill" data-percent="80">
+          <div class="skill-head">
+            <span>JavaScript (Vanilla)</span><span class="percent">80%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="skill" data-percent="70">
+          <div class="skill-head">
+            <span>Framework & Tooling</span><span class="percent">70%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio container reveal" aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">Portfolio</h2>
+      <p class="muted">Klik salah satu proyek untuk melihat detail.</p>
+      <div class="portfolio-grid" role="list">
+        <article class="port-item" role="listitem" tabindex="0"
+                 data-title="Project A — Web App"
+                 data-desc="Project A adalah aplikasi web interaktif yang menonjolkan UI minimalis dan performa."
+                 data-tech="HTML, CSS, JavaScript"
+                 data-media="assets/project1.jpg">
+          <img src="assets/project1-thumb.jpg" alt="Thumbnail Project A" />
+          <div class="port-meta">
+            <h3>Project A</h3>
+            <p>Web App</p>
+          </div>
+        </article>
+
+        <article class="port-item" role="listitem" tabindex="0"
+                 data-title="Project B — Video Demo"
+                 data-desc="Project B menampilkan prototipe interaksi kompleks dengan demo video."
+                 data-tech="React, CSS Modules"
+                 data-media="assets/project2.mp4"
+                 data-media-type="video">
+          <img src="assets/project2-thumb.jpg" alt="Thumbnail Project B" />
+          <div class="port-meta">
+            <h3>Project B</h3>
+            <p>Video Demo</p>
+          </div>
+        </article>
+
+        <article class="port-item" role="listitem" tabindex="0"
+                 data-title="Project C — Landing Page"
+                 data-desc="Landing page responsif dengan fokus konversi dan A/B testing."
+                 data-tech="HTML, Tailwind CSS"
+                 data-media="assets/project3.jpg">
+          <img src="assets/project3-thumb.jpg" alt="Thumbnail Project C" />
+          <div class="port-meta">
+            <h3>Project C</h3>
+            <p>Landing Page</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Modal for portfolio -->
+    <div id="portfolio-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      <div class="modal-panel" role="document">
+        <button id="modal-close" class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-content">
+          <div class="modal-media" id="modal-media"></div>
+          <div class="modal-info">
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+            <p class="modal-tech" id="modal-tech"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contact" class="contact container reveal" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Email: <a href="mailto:vidy@example.com">vidy@example.com</a></p>
+      <p>Telepon: +62 812 3456 7890</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© <span id="year"></span> Vidy Prayogo</p>
+        <p class="muted">Based in Indonesia — UNIKMA</p>
+      </div>
+      <div class="footer-right">
+        <a class="social" href="#" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4v15h-4v-15zm7 0h3.84v2.04h.06c.53-1 1.83-2.04 3.77-2.04 4.03 0 4.77 2.65 4.77 6.09V23.5h-4v-7.19c0-1.71-.03-3.91-2.38-3.91-2.38 0-2.74 1.86-2.74 3.78V23.5h-4V8.5z"/></svg>
+        </a>
+        <a class="social" href="#" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.96 3.22 9.17 7.69 10.66.56.1.76-.24.76-.54 0-.27-.01-1.17-.01-2.12-3.12.68-3.78-1.5-3.78-1.5-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.67.08-.67 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.71-1.49-2.49-.28-5.11-1.25-5.11-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.46.11-3.04 0 0 .95-.3 3.12 1.16a10.78 10.78 0 012.84-.38c.96.01 1.93.13 2.84.38 2.17-1.46 3.12-1.16 3.12-1.16.61 1.58.23 2.75.11 3.04.72.79 1.16 1.8 1.16 3.03 0 4.31-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.77.54C20 20.92 23.25 16.71 23.25 11.75 23.25 5.48 18.27.5 12 .5z"/></svg>
+        </a>
+        <a class="social" href="#" aria-label="Twitter">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.64 4.83c-.77.34-1.6.57-2.47.67a4.31 4.31 0 001.89-2.38 8.62 8.62 0 01-2.72 1.04 4.3 4.3 0 00-7.32 3.92A12.2 12.2 0 013 3.15a4.3 4.3 0 001.33 5.74c-.65-.02-1.26-.2-1.8-.5v.05a4.3 4.3 0 003.45 4.21c-.42.11-.86.17-1.31.06.37 1.16 1.44 2.01 2.71 2.04A8.63 8.63 0 012 19.54a12.15 12.15 0 006.58 1.93c7.9 0 12.23-6.54 12.23-12.22v-.56a8.66 8.66 0 002.12-2.46l.01-.01z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
